@@ -2,6 +2,25 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Notes
+
+```javascript
+import { combineReducers } from 'redux'
+
+import todosReducer from './features/todos/todosSlice'
+import filtersReducer from './features/filters/filtersSlice'
+
+const rootReducer = combineReducers({
+  // Define a top-level state field named `todos`, handled by `todosReducer`
+  todos: todosReducer,
+  filters: filtersReducer
+})
+
+export default rootReducer
+```
+
+> **Remember, the `key` names you give to `combineReducers` decides what the key names of your state object will be!**
+
 ## Available Scripts
 
 In the project directory, you can run:
