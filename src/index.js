@@ -5,6 +5,8 @@ import App from './App'
 
 import './api/server'
 
+// the entry point file for the application. It renders the main <App> component.
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

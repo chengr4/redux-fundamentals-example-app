@@ -1,5 +1,7 @@
 /* eslint-disable no-unused-vars */
 
+// provides a fake REST API for our data. Our app will fetch data from these fake endpoints later
+
 import { Server, Model, Factory, hasMany, RestSerializer } from 'miragejs'
 
 import faker from 'faker'
