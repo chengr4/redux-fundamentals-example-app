@@ -21,6 +21,10 @@ export default rootReducer
 
 > **Remember, the `key` names you give to `combineReducers` decides what the key names of your state object will be!**
 
+## References
+
+1. https://redux.js.org/tutorials/fundamentals/part-3-state-actions-reducers
+
 ## Available Scripts
 
 In the project directory, you can run:
