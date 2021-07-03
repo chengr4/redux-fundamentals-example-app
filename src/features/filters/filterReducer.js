@@ -4,7 +4,6 @@ const initialState = {
 }
 
 export default function filtersReducer(state = initialState, action) {
-  console.log('i run');
   switch (action.type) {
     case 'filters/statusFilterChanged': {
       return {
