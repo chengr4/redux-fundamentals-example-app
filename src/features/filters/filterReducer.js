@@ -13,6 +13,7 @@ export default function filtersReducer(state = initialState, action) {
       }
     }
     default:
+      console.log('filter default action is called');
       return state
   }
 }
