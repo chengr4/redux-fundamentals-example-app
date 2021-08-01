@@ -36,6 +36,7 @@ export default function todosReducer(state = initialState, action) {
     }
 
     default:
-      return state
+      console.log('todo default action is called');
+      return state;
   }
 }
