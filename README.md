@@ -54,7 +54,8 @@ export default rootReducer
 
 - [x] [State, Actions, and Reducers](https://redux.js.org/tutorials/fundamentals/part-3-state-actions-reducers)
 - [x] [Store](https://redux.js.org/tutorials/fundamentals/part-4-store)
-- [ ] [ UI and React](https://redux.js.org/tutorials/fundamentals/part-5-ui-react)
+- [x] [UI and React](https://redux.js.org/tutorials/fundamentals/part-5-ui-react)
+- [ ] [Async Logic and Data Fetching](https://redux.js.org/tutorials/fundamentals/part-6-async-logic)
 
 
 ## References
