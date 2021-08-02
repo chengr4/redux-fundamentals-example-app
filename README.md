@@ -30,7 +30,8 @@ export default rootReducer
 ### Redux Fundamentals
 
 - [x] [State, Actions, and Reducers](https://redux.js.org/tutorials/fundamentals/part-3-state-actions-reducers)
-- [ ] [Store](https://redux.js.org/tutorials/fundamentals/part-4-store)
+- [x] [Store](https://redux.js.org/tutorials/fundamentals/part-4-store)
+- [ ] [ UI and React](https://redux.js.org/tutorials/fundamentals/part-5-ui-react)
 
 
 ## References
