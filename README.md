@@ -25,6 +25,29 @@ export default rootReducer
 
 > **Remember, the `key` names you give to `combineReducers` decides what the key names of your state object will be!**
 
+### How to solve unnecessary re-render?
+
+1. [React.memo](https://reactjs.org/docs/react-api.html#reactmemo)
+2. Another option is e.g. to have the `<TodoList>` component only read an array of todo IDs from the store, and pass those IDs as props to the child `<TodoListItem>` components. Then, each `<TodoListItem>` can use that ID to find the right todo object it needs + `shallowEqual` used to check if the items inside the array ate still the same
+  ```javascript
+  import React from 'react'
+  import { useSelector, shallowEqual } from 'react-redux'
+  import TodoListItem from './TodoListItem'
+
+  const selectTodoIds = state => state.todos.map(todo => todo.id)
+
+  const TodoList = () => {
+  const todoIds = useSelector(selectTodoIds, shallowEqual);
+
+  const renderedListItems = todoIds.map(todoId => {
+    return <TodoListItem key={todoId} id={todoId} />
+  })
+
+  return <ul className="todo-list">{renderedListItems}</ul>
+  }
+  ```
+3. [A "memoized selector"](https://redux.js.org/tutorials/fundamentals/part-7-standard-patterns)
+
 ## Finished Topics
 
 ### Redux Fundamentals
