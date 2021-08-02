@@ -1,7 +1,7 @@
 import { createStore, compose, applyMiddleware } from 'redux'
 import rootReducer from './rootReducer'
 import { sayHiOnDispatch, includeMeaningOfLife } from './exampleAddons/enhancers'
-import { print1, print2, print3 } from './exampleAddons/middleware'
+import { delayedMessageMiddleware, loggerMiddleware } from './exampleAddons/middleware'
 
 let preloadedState = {
 
@@ -11,7 +11,7 @@ let preloadedState = {
 const composedEnhancer = compose(sayHiOnDispatch, includeMeaningOfLife);
 
 // Redux middleware are actually implemented on top of a very special store enhancer that comes built in with Redux, called applyMiddleware.
-const middlewareEnhancer = applyMiddleware(print1, print2, print3)
+const middlewareEnhancer = applyMiddleware(delayedMessageMiddleware, loggerMiddleware)
 
 /* 
 Beside rootReducer and preloadedState
