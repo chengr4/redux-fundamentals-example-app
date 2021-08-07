@@ -87,6 +87,7 @@ function exampleMiddleware(storeAPI) {
 + [x] [Store](https://redux.js.org/tutorials/fundamentals/part-4-store)
 + [x] [UI and React](https://redux.js.org/tutorials/fundamentals/part-5-ui-react)
 + [ ] [Async Logic and Data Fetching](https://redux.js.org/tutorials/fundamentals/part-6-async-logic)
++ [] [Standard Redux Patterns](https://redux.js.org/tutorials/fundamentals/part-7-standard-patterns)
 
 ## References
 
