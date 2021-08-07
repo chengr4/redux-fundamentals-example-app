@@ -1,6 +1,6 @@
 const initialState = {
   status: 'All',
-  colors: []
+  colors: [],
 }
 
 export default function filtersReducer(state = initialState, action) {
@@ -9,11 +9,11 @@ export default function filtersReducer(state = initialState, action) {
       return {
         // Again, one less level of nesting to copy
         ...state,
-        status: action.payload
+        status: action.payload,
       }
     }
     default:
-      console.log('filter default action is called');
+      console.log('filter default action is called')
       return state
   }
 }
