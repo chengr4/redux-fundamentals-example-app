@@ -6,6 +6,10 @@ import App from './App'
 import './api/server'
 import store from './store'
 
+import { fetchTodos } from './features/todos/todoReducer'
+
+store.dispatch(fetchTodos)
+
 const result = store.dispatch({ type: 'todos/todoAdded', payload: 'Learn about actions' });
 console.log('dispatch result', result);
 

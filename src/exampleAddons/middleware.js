@@ -1,3 +1,6 @@
+import { client } from '../api/client'
+
+
 export const print1 = (storeAPI) => (next) => (action) => {
   console.log('1')
   return next(action)
@@ -33,3 +36,16 @@ export const delayedMessageMiddleware = storeAPI => next => action => {
   return next(action)
 }
 
+// async logic
+
+export const fetchTodosMiddleware = storeAPI => next => action => {
+  if (action.type === 'todos/fetchTodos') {
+    // Make an API call to fetch todos from the server
+    client.get('todos').then(todos => {
+      // Dispatch an action with the todos we received
+      storeAPI.dispatch({ type: 'todos/todosLoaded', payload: todos })
+    })
+  }
+
+  return next(action)
+}
