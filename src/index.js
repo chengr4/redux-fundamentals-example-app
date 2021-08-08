@@ -10,7 +10,7 @@ import { fetchTodos } from './features/todos/todoReducer'
 
 store.dispatch(fetchTodos)
 
-const result = store.dispatch({ type: 'todos/todoAdded', payload: 'Learn about actions' });
+const result = store.dispatch({ type: 'todos/todoAdded', payload: 'Learn about actions', data: 'testest' });
 console.log('dispatch result', result);
 
 ReactDOM.render(

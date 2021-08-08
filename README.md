@@ -79,6 +79,16 @@ function exampleMiddleware(storeAPI) {
 + `wrapDispatch` (only called once): The middle function receives a function called `next` as its argument, which is actually the next middleware in the pipeline. If this middleware is the last one in the sequence, then `next` is actually the original `store.dispatch` function instead. Calling `next(action)` passes the middleware to the next middleware in the pipeline.
 + `handleAction`: Finally, the inner function receives the current `action` as its argument, and will be called every time an `action` is dispatched.
 
+### Standard Redux Patterns
+
+1. **Action Creators**: In practice, we don't actually write **action objects** inline when we dispatch them. Instead, we use "action creator", which creates and returns an action object.
+
+> Action creators have two primary purposes:
+> They prepare and format the contents of action objects
+> They encapsulate any additional work needed whenever we create those actions
+
+2. **Memoized Selectors**: `Memoized selector` functions are selectors that save the most recent result value, and if you call them multiple times with the same inputs, will return the same result value. If you call them with different inputs than last time, they will recalculate a new result value, cache it, and return the new result.
+
 ## Finished Topics
 
 ### Redux Fundamentals
@@ -87,7 +97,7 @@ function exampleMiddleware(storeAPI) {
 + [x] [Store](https://redux.js.org/tutorials/fundamentals/part-4-store)
 + [x] [UI and React](https://redux.js.org/tutorials/fundamentals/part-5-ui-react)
 + [ ] [Async Logic and Data Fetching](https://redux.js.org/tutorials/fundamentals/part-6-async-logic)
-+ [] [Standard Redux Patterns](https://redux.js.org/tutorials/fundamentals/part-7-standard-patterns)
++ [ ] [Standard Redux Patterns](https://redux.js.org/tutorials/fundamentals/part-7-standard-patterns)
 
 ## References
 
