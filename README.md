@@ -100,9 +100,13 @@ function exampleMiddleware(storeAPI) {
 + [ ] [Standard Redux Patterns](https://redux.js.org/tutorials/fundamentals/part-7-standard-patterns)
 + [ ] [Modern Redux with Redux Toolkit](https://redux.js.org/tutorials/fundamentals/part-8-modern-redux)
 
+### Style Guide
+
++ [ ] [Style Guide: Best Practices](https://redux.js.org/style-guide/style-guide)
+
 ## References
 
-1. https://redux.js.org/tutorials/fundamentals/part-3-state-actions-reducers
+1. https://redux.js.org
 2. https://chengr4.medium.com/redux-d3899bf23959
 
 ## Available Scripts
